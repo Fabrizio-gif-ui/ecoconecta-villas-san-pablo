@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 8. Variables de diseño para desarrollo — Manual de Identidad Visual EcoConecta Villas de San Pablo */
+:root {
+  --eco-forest: #063B2E;
+  --eco-green: #168A2E;
+  --eco-leaf: #65A90A;
+  --eco-teal: #0A9B70;
+  --eco-yellow: #F6C400;
+  --eco-orange: #F28C00;
+  --eco-charcoal: #202522;
+  --eco-background: #F2F5F2;
+  --font-heading: 'Poppins', 'Arial', sans-serif;
+  --font-body: 'Inter', 'Arial', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    background-color: var(--eco-background);
+    color: var(--eco-charcoal);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.015em;
+  }
+}
+
+/* 5. Aplicación en interfaces web y móviles (Manual de Identidad Visual) */
+
+/* Tarjetas: Fondo blanco, borde gris claro y sombra muy sutil */
+.eco-card {
+  @apply rounded-2xl border border-[#D8E2DC] bg-white shadow-sm;
+}
+
+/* Botón principal: Verde Eco (#168A2E) con texto blanco; acción breve */
+.eco-btn-primary {
+  @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-[#168A2E] px-5 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-[#063B2E] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+/* Botón secundario: Fondo blanco, borde verde bosque (#063B2E) y texto verde oscuro (#063B2E) */
+.eco-btn-outline,
+.eco-btn-secondary {
+  @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border-2 border-[#063B2E] bg-white px-5 py-3 text-base font-semibold text-[#063B2E] transition hover:bg-[#F2F5F2] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+/* Botón conexión / reciclable: Verde turquesa (#0A9B70) con texto blanco */
+.eco-btn-teal {
+  @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-[#0A9B70] px-5 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-[#063B2E] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+/* Botón puntos e incentivos: Amarillo solar (#F6C400) con texto carbón/verde bosque de alto contraste */
+.eco-btn-amber {
+  @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-[#F6C400] px-5 py-3 text-base font-bold text-[#063B2E] shadow-sm transition hover:bg-[#F28C00] hover:text-white active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+/* Botón transformación / insignia: Naranja mariposa (#F28C00) */
+.eco-btn-orange {
+  @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-[#F28C00] px-5 py-3 text-base font-bold text-white shadow-sm transition hover:bg-[#063B2E] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+.eco-input {
+  @apply min-h-[48px] w-full rounded-xl border-2 border-[#C5D3CA] bg-white px-4 py-3 text-base text-[#202522] placeholder:text-stone-400 focus:border-[#168A2E] focus:outline-none focus:ring-2 focus:ring-[#168A2E]/20;
+}
